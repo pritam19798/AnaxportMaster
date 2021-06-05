@@ -22,7 +22,7 @@ public class StateInfo {
 	private String stateDesc;
 	
 	@Column(name="GST_CODE",columnDefinition = "varchar(2)")
-	private long gstCode;
+	private String gstCode;
 	
 	@Column(name="ALPHA_CODE",columnDefinition = "long")
 	private long alphaCode;
@@ -67,7 +67,7 @@ public class StateInfo {
 
 	}
 
-	public StateInfo(Integer stateId, String stateName, String stateDesc, long gstCode, long alphaCode,
+	public StateInfo(Integer stateId, String stateName, String stateDesc, String gstCode, long alphaCode,
 			String regionValue, int capitalId, String pinStart, String pinEnd, int visitCount, int displayOrder,
 			String remarks, char isActive, int createdBy, LocalDateTime createdOn, int modifieddBy,
 			LocalDateTime modifiedOn) {
@@ -115,11 +115,11 @@ public class StateInfo {
 		this.stateDesc = stateDesc;
 	}
 
-	public long getGstCode() {
+	public String getGstCode() {
 		return gstCode;
 	}
 
-	public void setGstCode(long gstCode) {
+	public void setGstCode(String gstCode) {
 		this.gstCode = gstCode;
 	}
 
